@@ -1,0 +1,311 @@
+.app {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 3rem;
+}
+
+/* ── Header ── */
+.app-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.app-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--green);
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.app-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ── Ledger table ── */
+.ledger {
+  background: var(--card);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.ledger-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* ── Member row ── */
+.member-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.12s;
+  gap: 1rem;
+}
+
+.member-row:last-child {
+  border-bottom: none;
+}
+
+.member-row:hover {
+  background: var(--card-hover);
+}
+
+.member-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  min-width: 80px;
+}
+
+.member-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+/* ── +/- buttons ── */
+.btn-adjust {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.35rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.12s, transform 0.08s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.btn-adjust:active {
+  transform: scale(0.92);
+}
+
+.btn-minus {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.btn-minus:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn-plus {
+  background: var(--green);
+  color: #012834;
+}
+
+.btn-plus:hover {
+  background: #3ab52e;
+}
+
+/* ── Count input ── */
+.count-input {
+  width: 64px;
+  height: 36px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s, color 0.15s;
+  /* hide spinner arrows */
+  -moz-appearance: textfield;
+}
+
+.count-input::-webkit-outer-spin-button,
+.count-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.count-input:focus {
+  border-color: var(--green);
+}
+
+.count-input.positive {
+  color: var(--green);
+}
+
+.count-input.negative {
+  color: #ff7070;
+}
+
+/* ── Remove button ── */
+.btn-remove {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.3rem;
+  transition: background 0.12s, color 0.12s;
+  flex-shrink: 0;
+}
+
+.btn-remove:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+/* ── Inline remove confirmation ── */
+.confirm-remove {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-left: 0.3rem;
+  white-space: nowrap;
+}
+
+.btn-confirm-yes {
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.btn-confirm-yes:hover {
+  background: #c94444;
+}
+
+.btn-confirm-no {
+  background: var(--surface);
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.btn-confirm-no:hover {
+  background: #226070;
+}
+
+/* ── Empty state ── */
+.empty-state {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* ── Add member form ── */
+.add-member-form {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.add-member-input {
+  flex: 1;
+  height: 44px;
+  padding: 0 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.add-member-input:focus {
+  border-color: var(--green);
+}
+
+.add-member-input::placeholder {
+  color: var(--text-muted);
+}
+
+.btn-add {
+  height: 44px;
+  padding: 0 1.25rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--green);
+  color: #012834;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.12s, transform 0.08s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-add:hover:not(:disabled) {
+  background: #3ab52e;
+}
+
+.btn-add:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn-add:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .app {
+    padding: 1.5rem 0.75rem 2rem;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .member-row {
+    padding: 0.65rem 0.875rem;
+  }
+
+  .member-name {
+    font-size: 0.95rem;
+    min-width: 60px;
+  }
+
+  .count-input {
+    width: 54px;
+  }
+}
