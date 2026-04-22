@@ -5,10 +5,6 @@ const STORAGE_KEY = 'lunch-ledger-members'
 
 const DEFAULT_MEMBERS = [
   { id: 1, name: 'Rob', count: 0 },
-  { id: 2, name: 'Wajdi', count: 0 },
-  { id: 3, name: 'Landon', count: 0 },
-  { id: 4, name: 'Graham', count: 0 },
-  { id: 5, name: 'Charles', count: 0 },
 ]
 
 function loadMembers() {
